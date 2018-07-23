@@ -1,0 +1,13 @@
+{
+  "name": "finland-municipalities",
+  "version": "1.0.0",
+  "description": "Municipality names and codes in Finland",
+  "main": "index.json",
+  "homepage": "https://github.com/jholster/finland-municipalities",
+  "repository": "github:jholster/finland-municipalities",
+  "author": "Jaakko Holster <holster@iki.fi>",
+  "license": "MIT",
+  "scripts": {
+    "build": "curl -L -o data.csv https://www.avoindata.fi/data/dataset/7307868e-54d0-4f0b-90b0-d0126ad8586d/resource/b1cb9870-191f-4616-9c53-5388b7ca6beb/download/kuntaluettelo-laajat-tiedot-2018-01-01.csv && node convert.js > index.json && echo 'Successfully generated index.json'"
+  }
+}
